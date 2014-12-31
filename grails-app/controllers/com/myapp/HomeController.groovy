@@ -7,7 +7,7 @@ class HomeController {
 
 	def index() {
 		if (isLoggedIn()) {
-			redirect controller:"project"
+			redirect controller:"reservation"
 		} else {
 			render view: 'index'
 		}

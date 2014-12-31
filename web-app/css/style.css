@@ -8,6 +8,11 @@
     text-align: center;
 }
 
+#select-date-panel {
+    max-width: 50%;
+    margin-left: 25%;
+}
+
 #availability-table {
     border-collapse: separate;
     border-spacing: 5px;
@@ -18,4 +23,10 @@
 }
 #availability-table td.available {
     background: green;
+    text-align: center;
+}
+
+#availability-table .glyphicon-thumbs-up {
+    text-align: center;
+    color: white;
 }

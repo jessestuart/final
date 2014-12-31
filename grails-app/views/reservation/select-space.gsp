@@ -25,7 +25,6 @@
                 </thead>
                 <tbody>
                     <g:each in="${locations}" var="location">
-                        %{--<g:set var="location_reservations" value="${reservations[location]}">--}%
                         <tr>
                             <td colspan="2">${location.building} ${location.room}</td>
                             <g:each in="${availableTimes}" var="time" status="i">
@@ -33,7 +32,11 @@
                                     <td class="unavailable"></td>
                                 </g:if>
                                 <g:else>
-                                    <td class="available"></td>
+                                    <td class="available">
+                                        <g:link controller="reservation" action="confirmReservation" params="[locationId: location.id, startTime: time]">
+                                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        </g:link>
+                                    </td>
                                 </g:else>
                             </g:each>
                         </tr>

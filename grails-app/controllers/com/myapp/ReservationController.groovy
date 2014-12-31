@@ -2,7 +2,10 @@ package com.myapp
 
 import groovy.time.TimeCategory
 
+import java.text.SimpleDateFormat
+
 class ReservationController {
+    def springSecurityService
 
     def index() {
         render view: 'make-reservation'
@@ -10,14 +13,6 @@ class ReservationController {
 
     def selectDate() {
         Date date = params.date
-        println date
-
-        use (TimeCategory) {
-            def today = new Date().clearTime()
-            def noon = today + 12.hours
-            def onepm = today + 13.hours
-            println "noon : $noon, onepm : $onepm"
-        }
 
         def locations = Location.list()
         def reservations = Reservation.createCriteria().list {
@@ -33,11 +28,24 @@ class ReservationController {
             }
         }
 
-        println locations
-        println reservations
-
         render view: 'select-space', model: [locations: locations,
                                              reservations: reservations,
                                              availableTimes: availableTimes]
+    }
+
+    def confirmReservation(long locationId, Date startTime) {
+        println params
+        println "start time : $startTime"
+        def location = Location.get locationId
+        def user = springSecurityService.currentUser
+        def endTime
+        use (TimeCategory) {
+            endTime = startTime + 1.hour
+        }
+        new Reservation(space: location, reserver: user, startDate: startTime, endDate: endTime).save flush:true
+        println "start date : $startTime, end time: $endTime"
+        flash.message = "Great! See you at ${location.building} ${location.room} on ${new SimpleDateFormat('EEE, dd MMM yyyy HH:mm a').format(startTime)}."
+
+        redirect controller: 'reservation'
     }
 }

@@ -11,14 +11,17 @@
     <meta name="layout" content="main">
     <title></title>
     <g:javascript src="jquery-1.11.2.min.js"/>
-    <g:javascript src="bootstrap-datetimepicker.js"/>
-    <script>
-        $('#datepicker').datepicker();
-    </script>
 </head>
 
 <body>
-    <div class="panel panel-default">
+    <g:if test="${flash.message}">
+        <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            <span class="sr-only">Success!</span>
+            ${flash.message}
+        </div>
+    </g:if>
+    <div class="panel panel-default" id="select-date-panel">
         <div class="panel-heading">When would you like to reserve a space?</div>
         <div class="panel-body">
             <div class="pick-date">
