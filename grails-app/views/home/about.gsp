@@ -8,18 +8,25 @@
 <body>
     <div class="panel panel-default" id="about-panel">
         <div class="panel-heading">
-            <h3>About this App</h3>
+            <h3>Welcome to OrganizeVC!</h3>
         </div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-8">
-                    <p class="intro">Lo-fi occupy lomo Helvetica skateboard, fap kogi salvia Bushwick hoodie migas
-                    aesthetic whatever tofu selfies. Put a bird on it cred cardigan, flexitarian jean shorts seitan plaid
-                    disrupt migas before they sold out keytar. Salvia quinoa wayfarers sriracha YOLO selfies,
-                    put a bird on it plaid master cleanse disrupt Godard. VHS meditation tattooed, freegan twee kale
-                    chips High Life PBR&B master cleanse. Pug Helvetica VHS forage, keffiyeh asymmetrical kogi flannel.
-                    Ennui migas fanny pack, whatever Banksy brunch Pitchfork flannel actually crucifix selvage swag hashtag.
-                    Distillery crucifix iPhone Godard 90's try-hard.</p>
+                    <p class="intro">
+                        OrganizeVC is a space reservation system that allows you to book various rooms on Vassar’s campus
+                        for events. Rather than hunting for a free space by blundering through Rocky interrupting lectures
+                        or walking in on film screenings, OrganizeVC allows you to reserve a room in advance or even on
+                        the day of. You can reserve rooms for several hours at time, and also view reservation history
+                        for any given date.
+                    </p>
+                    <p class="intro">
+                        With OrganizeVC, you can now ensure your org, performance, a cappella group, study session, or
+                        impromptu drum circle has the appropriate space!
+                    </p>
+                    <p class="conclusion">
+                        Happy organizing.
+                    </p>
                 </div>
                 <div class="col-xs-4">
                     <img src="/images/lillie.png" class="prof-pic">

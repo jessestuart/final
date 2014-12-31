@@ -9,8 +9,8 @@
         <div class="billboard">
             <r:img dir="images" file="billboard.jpg" />
             <div class="billboard-caption">
-              <h1>Hello, world.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Welcome to OrganizeVC.</h1>
+              <p class="lead">OrganizeVC is a space reservation system that allows you to book various rooms on Vassar’s campus for events.</p>
               <g:link class="btn btn-lg btn-primary" controller="registration">Sign up today</g:link>
             </div>
         </div>

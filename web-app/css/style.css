@@ -1,6 +1,12 @@
 #about-panel p.intro {
     font-size: 18px;
 }
+#about-panel p.conclusion {
+    margin-top 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
 #about-panel .prof-pic {
     max-width: 250px;
 }
