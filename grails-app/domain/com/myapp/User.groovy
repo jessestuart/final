@@ -12,15 +12,13 @@ class User {
 	
 	String fullName
 	String email
-	String dorm
-	
+
 	static transients = ['springSecurityService']
 
 	static constraints = {
 		fullName blank: false
 		password blank: false
 		email blank: false, email: true, unique:true
-		dorm blank: false
 	}
 
 	static mapping = {

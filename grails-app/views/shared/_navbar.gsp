@@ -21,14 +21,15 @@
 					%{--<g:each var="c" in="${grailsApplication.controllerClasses.findAll { GCU.isStaticProperty(it.clazz, 'menuItem') }.sort { it.fullName } }">--}%
 						%{--<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.clazz.menuItem}</g:link></li>--}%
 					%{--</g:each>--}%
-					<li><g:link controller="home" action="index">Home</g:link></li>
+					%{--<li><g:link controller="home" action="index">Home</g:link></li>--}%
 					<li><g:link controller="reservation" action="index">Reserve A Space</g:link></li>
+					<li><g:link controller="reservation" action="reservationHistory">View History</g:link> </li>
 					<li><g:link controller="home" action="about">About</g:link></li>
 
 				</sec:ifLoggedIn>
 				<sec:ifNotLoggedIn>
 					<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
-				    <li><a href="${createLink(uri: '/')}">About</a></li>
+				    <li><g:link controller="home" action="about">About</g:link></li>
 				</sec:ifNotLoggedIn>
 			</ul>
 			

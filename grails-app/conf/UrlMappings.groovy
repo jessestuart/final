@@ -6,7 +6,7 @@ class UrlMappings {
 			}
 		}
 
-		"/"(controller:'home')
+		"/"(controller:'registration')
 		"/registration"(controller:'registration')
 		"/login"(controller:'login')
 		"/logout"(controller:'logout')

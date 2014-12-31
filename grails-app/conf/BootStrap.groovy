@@ -16,16 +16,15 @@ class BootStrap {
             assert roleAdmin
             
             def users = [
-                    lillie: ['Lillie Barnes', 'libarnes@vassar.edu', 'Joss'],
-                    jesse: ['Jesse Stuart', 'jdstuart@icloud.com', 'TAs']
+                    lillie: ['Lillie Barnes', 'libarnes@vassar.edu'],
+                    jesse: ['Jesse Stuart', 'jdstuart@icloud.com']
             ]
         
             users.each { uname, data ->
                 def user = new User(
                         password:'asdf',
                         fullName: data[0],
-                        email: data[1],
-                        dorm: data[2]
+                        email: data[1]
                 )
                 user.save flush:true, failOnError:true
                 UserRole.create user, roleAdmin, true

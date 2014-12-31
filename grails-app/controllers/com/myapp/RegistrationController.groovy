@@ -21,7 +21,7 @@ class RegistrationController {
             return
         }
 		
-		if (params.terms != 'on') userInstance.errors.reject("registration.terms.required.message", null, "Please accept the terms of use")
+//		if (params.terms != 'on') userInstance.errors.reject("registration.terms.required.message", null, "Please accept the terms of use")
 		
         if (userInstance.hasErrors()) {
             respond userInstance.errors, view:'index'
@@ -43,7 +43,7 @@ class RegistrationController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'welcome.message', default: 'Welcome!')
-                redirect controller:"project", action:"index"
+                redirect controller:"reservation", action:"index"
             }
             '*' { respond userInstance, [status: CREATED] }
         }

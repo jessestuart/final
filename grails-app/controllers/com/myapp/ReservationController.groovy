@@ -62,4 +62,7 @@ class ReservationController {
         }
         redirect controller: 'reservation'
     }
+
+    def reservationHistory() {
+    }
 }
