@@ -33,16 +33,16 @@ class ReservationController {
                                              availableTimes: availableTimes]
     }
 
-    def confirmReservation(long locationId, Date startTime) {
+    def confirmReservation(long locationId, long startTime) {
         println params
-        println "start time : $startTime"
         def location = Location.get locationId
+        def startDate = new Date(startTime)
         def user = springSecurityService.currentUser
         def endTime
         use (TimeCategory) {
-            endTime = startTime + 1.hour
+            endTime = startDate + 59.minutes + 59.seconds
         }
-        new Reservation(space: location, reserver: user, startDate: startTime, endDate: endTime).save flush:true
+        new Reservation(space: location, reserver: user, startDate: startDate, endDate: endTime).save flush:true
         println "start date : $startTime, end time: $endTime"
         flash.message = "Great! See you at ${location.building} ${location.room} on ${new SimpleDateFormat('EEE, dd MMM yyyy HH:mm a').format(startTime)}."
 

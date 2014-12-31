@@ -33,7 +33,7 @@
                                 </g:if>
                                 <g:else>
                                     <td class="available">
-                                        <g:link controller="reservation" action="confirmReservation" params="[locationId: location.id, startTime: time]">
+                                        <g:link controller="reservation" action="confirmReservation" params="[locationId: location.id, startTime: time.time]">
                                             <span class="glyphicon glyphicon-thumbs-up"></span>
                                         </g:link>
                                     </td>
