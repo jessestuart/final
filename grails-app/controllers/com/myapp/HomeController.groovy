@@ -9,7 +9,7 @@ class HomeController {
 		if (isLoggedIn()) {
 			redirect controller: 'reservation'
 		} else {
-			redirect controller: 'login'
+			render view: 'index'
 		}
 	}
 

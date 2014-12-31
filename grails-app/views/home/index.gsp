@@ -15,62 +15,15 @@
             </div>
         </div>
 		
-		<div class="row marketing">
-			<div class="col-md-4">
-				<img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                <p><a class="btn btn-default" href="javascript:void(0)">View details »</a></p>
-			</div>
-			<div class="col-md-4">
-				<img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                <p><a class="btn btn-default" href="javascript:void(0)">View details »</a></p>
-			</div>
-				<div class="col-md-4">
-				<img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                <p><a class="btn btn-default" href="javascript:void(0)">View details »</a></p>
-			</div>
-		</div>
-		
-		<hr class="featurette-divider">
-		
         <div class="row featurette">
             <div class="col-md-7">
-				<h2>First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+				<h2>Now you can now ensure your org, study session, or impromptu drum circle has the appropriate space!<span class="text-muted"></span></h2>
+				<p class="lead">Rather than hunting for a free space by blundering through Rocky interrupting lectures or walking in on film screenings, OrganizeVC allows you to reserve a room in advance or even on the day of. You can reserve rooms for several hours at time, and also view a reservation history for any given date.</p>
             </div>
             <div class="col-md-5">
-                <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+                <img class="featurette-image img-responsive" src="/images/vassar.png" width="500" style="border-radius: 10px;" alt="Generic placeholder image">
 			</div>
         </div>
 		
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-5">
-            <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-        
 	</body>
 </html>
