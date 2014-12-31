@@ -18,6 +18,10 @@
         <div class="panel-body">
             <table class="table table-hover">
                 <thead>
+                    <th colspan="2">Name</th>
+                    <g:each in="${availableTimes}" var="date">
+                        <th><g:formatDate date="${date}" format="h:mm a"/></th>
+                    </g:each>
                 </thead>
                 <tbody>
                     <g:each in="${locations}" var="location">

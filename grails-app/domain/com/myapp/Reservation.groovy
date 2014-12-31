@@ -2,11 +2,11 @@ package com.myapp
 
 class Reservation {
     Location space
-    Date start
-    Date end
-    User owner
+    Date startDate
+    Date endDate
+    User reserver
 
-    static belongsTo = [owner: User]
+    static belongsTo = [reserver: User]
 
     static constraints = {
     }

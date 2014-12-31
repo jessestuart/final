@@ -21,10 +21,23 @@ class ReservationController {
 
         def locations = Location.list()
         def reservations = Reservation.createCriteria().list {
-            ge 'start', date.clearTime()
-            le 'end', (date.clearTime() + 1)
+            ge 'startDate', date.clearTime()
+            le 'endDate', (date.clearTime() + 1)
         }.groupBy { it.space }
 
-        render view: locations, model: [locations: locations, reservations: reservations]
+        def availableTimes = []
+        use (TimeCategory) {
+            def base = new Date().clearTime() + 10.hours
+            (0..10).each { i ->
+                availableTimes << (base + i.hours)
+            }
+        }
+
+        println locations
+        println reservations
+
+        render view: 'select-space', model: [locations: locations,
+                                             reservations: reservations,
+                                             availableTimes: availableTimes]
     }
 }

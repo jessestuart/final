@@ -6159,3 +6159,9 @@ textarea#name {
 textarea#descr {
   height: 50px;
 }
+#about-panel p.intro {
+  font-size: 18px;
+}
+#about-panel .prof-pic {
+  max-width: 250px;
+}
