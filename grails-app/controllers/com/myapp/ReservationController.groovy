@@ -22,7 +22,7 @@ class ReservationController {
 
         def availableTimes = []
         use (TimeCategory) {
-            def base = new Date().clearTime() + 10.hours
+            def base = date.clearTime() + 10.hours
             (0..10).each { i ->
                 availableTimes << (base + i.hours)
             }
