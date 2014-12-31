@@ -7,3 +7,15 @@
 .pick-date {
     text-align: center;
 }
+
+#availability-table {
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#availability-table td.unavailable {
+    background: red;
+}
+#availability-table td.available {
+    background: green;
+}

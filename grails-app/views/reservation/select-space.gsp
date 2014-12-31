@@ -16,7 +16,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">Select a Space and Time</div>
         <div class="panel-body">
-            <table class="table table-hover">
+            <table class="table table-hover" id="availability-table">
                 <thead>
                     <th colspan="2">Name</th>
                     <g:each in="${availableTimes}" var="date">
@@ -25,8 +25,17 @@
                 </thead>
                 <tbody>
                     <g:each in="${locations}" var="location">
+                        %{--<g:set var="location_reservations" value="${reservations[location]}">--}%
                         <tr>
-                            <td>${location.building} ${location.room}</td>
+                            <td colspan="2">${location.building} ${location.room}</td>
+                            <g:each in="${availableTimes}" var="time" status="i">
+                                <g:if test="${reservations[location].any { it.startDate <= time && it.endDate >= time} }">
+                                    <td class="unavailable"></td>
+                                </g:if>
+                                <g:else>
+                                    <td class="available"></td>
+                                </g:else>
+                            </g:each>
                         </tr>
                     </g:each>
                 </tbody>
