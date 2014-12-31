@@ -17,7 +17,8 @@ class BootStrap {
             
             def users = [
                     lillie: ['Lillie Barnes', 'libarnes@vassar.edu'],
-                    jesse: ['Jesse Stuart', 'jdstuart@icloud.com']
+                    jesse: ['Jesse Stuart', 'jdstuart@icloud.com'],
+                    james: ['James Joyce', 'james@joyce.com']
             ]
         
             users.each { uname, data ->
@@ -51,19 +52,15 @@ class BootStrap {
             def powerhouse = Location.findByBuilding('Powerhouse Theater')
             def lillie = User.findByFullName('Lillie Barnes')
             def jesse = User.findByFullName('Jesse Stuart')
+            def joyce = User.findByFullName('James Joyce')
 
-            def noon
-            def onepm
-            def twopm
             use(TimeCategory) {
                 def today = new Date().clearTime()
-                noon = today + 12.hours
-                onepm = today + 13.hours
-                twopm = today + 14.hours
-            }
 
-            new Reservation(space: sanders, startDate: noon, endDate: onepm, reserver: lillie).save flush: true
-            new Reservation(space: powerhouse, startDate: noon, endDate: twopm, reserver: jesse).save flush: true
+                new Reservation(space: sanders, startDate: today+12.hours, endDate: today+12.hours+59.minutes+59.seconds, reserver: lillie).save flush: true
+                new Reservation(space: powerhouse, startDate: today+14.hours, endDate: today+14.hours+59.minutes, reserver: jesse).save flush: true
+                new Reservation(space: powerhouse, startDate: today+18.hours, endDate: today+18.hours+59.minutes, reserver: joyce).save flush: true
+            }
         }
     }
     

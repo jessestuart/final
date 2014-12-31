@@ -64,5 +64,8 @@ class ReservationController {
     }
 
     def reservationHistory() {
+        render view: 'history', model: [
+                reservations: Reservation.list([sort: 'startDate'])
+        ]
     }
 }
