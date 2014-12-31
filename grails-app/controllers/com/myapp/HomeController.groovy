@@ -9,7 +9,11 @@ class HomeController {
 		if (isLoggedIn()) {
 			redirect controller:"project"
 		} else {
-			render view:"index"
+			render view: 'index'
 		}
+	}
+
+	def about() {
+		render view: 'about'
 	}
 }

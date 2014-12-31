@@ -2,16 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 linkbar">
-	            <a href="${createLink(uri: '/')}">About</a>
-	            <a href="${createLink(uri: '/')}">Tour</a>
-	            <a href="${createLink(uri: '/')}">Pricing</a>
-	            <a href="${createLink(uri: '/')}">Blog</a>
-	            <a href="${createLink(uri: '/')}">Contact</a>
-	            <a href="${createLink(uri: '/')}">Terms</a>
-	            <a href="${createLink(uri: '/')}">Privacy</a>
+	            <a href="${createLink(controller: 'home', action: 'about')}">About</a>
+	            <a href="mailto:libarnes@vassar.edu">Contact</a>
             </div>
         </div>
         
-		<p class="copy">&copy; Lillian Barnes ${new GregorianCalendar().get(Calendar.YEAR)}</p>
+		<p class="copy text-center">&copy; Lillian Barnes ${new GregorianCalendar().get(Calendar.YEAR)}</p>
 	</div>
 </footer>

@@ -1,0 +1,9 @@
+#about-panel p.intro {
+    font-size: 18px;
+}
+#about-panel .prof-pic {
+    max-width: 250px;
+}
+.pick-date {
+    text-align: center;
+}
