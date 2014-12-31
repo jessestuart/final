@@ -21,8 +21,6 @@ class RegistrationController {
             return
         }
 		
-//		if (params.terms != 'on') userInstance.errors.reject("registration.terms.required.message", null, "Please accept the terms of use")
-		
         if (userInstance.hasErrors()) {
             respond userInstance.errors, view:'index'
             return

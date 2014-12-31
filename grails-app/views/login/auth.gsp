@@ -3,6 +3,7 @@
 	<head>
 		<meta name="layout" content="splash"/>
 		<title>Login</title>
+		<link rel="stylesheet" href="/css/style.css">
 	</head>
 
 	<body>
@@ -28,6 +29,9 @@
 						</div>
                     </fieldset>
                     <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+					<div class="signup-link">
+						Or <g:link controller="registration" action="index">Sign Up Now!</g:link>
+					</div>
                 </form>
             </div>
         </div>
