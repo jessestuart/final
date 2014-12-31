@@ -48,11 +48,9 @@ class ReservationController {
     }
 
     def deleteReservation(long locationId, long startTime) {
-        println "delete reservation"
         def location = Location.get locationId
         def startDate = new Date(startTime)
         def res = Reservation.findBySpaceAndStartDate(location, startDate)
-        println "Reservation : $res"
         if (res) {
             res.delete flush: true
             flash.message = "Your reservation for ${location.building} ${location.room} on ${new SimpleDateFormat('EEE, dd MMM yyyy h:mm a').format(startTime)} has been removed."
