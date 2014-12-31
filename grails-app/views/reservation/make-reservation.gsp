@@ -33,7 +33,7 @@
         <div class="panel-body">
             <div class="pick-date">
                 <g:form controller="reservation" action="selectDate">
-                    <g:datePicker name="date" value="${new Date()}" precision="day"/>&nbsp;
+                    <g:datePicker name="date" value="${new Date()}" precision="day" relativeYears="[0..1]"/>&nbsp;
                     <input type="submit" value="Select" class="btn btn-primary">
                 </g:form>
             </div>
