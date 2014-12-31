@@ -21,6 +21,13 @@
             ${flash.message}
         </div>
     </g:if>
+    <g:if test="${flash.error}">
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+            <span class="sr-only">Uh oh!</span>
+            ${flash.error}
+        </div>
+    </g:if>
     <div class="panel panel-default" id="select-date-panel">
         <div class="panel-heading">When would you like to reserve a space?</div>
         <div class="panel-body">

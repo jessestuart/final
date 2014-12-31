@@ -34,7 +34,6 @@ class ReservationController {
     }
 
     def confirmReservation(long locationId, long startTime) {
-        println params
         def location = Location.get locationId
         def startDate = new Date(startTime)
         def user = springSecurityService.currentUser
@@ -43,9 +42,24 @@ class ReservationController {
             endTime = startDate + 59.minutes + 59.seconds
         }
         new Reservation(space: location, reserver: user, startDate: startDate, endDate: endTime).save flush:true
-        println "start date : $startTime, end time: $endTime"
         flash.message = "Great! See you at ${location.building} ${location.room} on ${new SimpleDateFormat('EEE, dd MMM yyyy HH:mm a').format(startTime)}."
 
+        redirect controller: 'reservation'
+    }
+
+    def deleteReservation(long locationId, long startTime) {
+        println "delete reservation"
+        def location = Location.get locationId
+        def startDate = new Date(startTime)
+        def res = Reservation.findBySpaceAndStartDate(location, startDate)
+        println "Reservation : $res"
+        if (res) {
+            res.delete flush: true
+            flash.message = "Your reservation for ${location.building} ${location.room} on ${new SimpleDateFormat('EEE, dd MMM yyyy HH:mm a').format(startTime)} has been removed."
+        }
+        else {
+            flash.error = "Unable to retrieve reservation at this time."
+        }
         redirect controller: 'reservation'
     }
 }

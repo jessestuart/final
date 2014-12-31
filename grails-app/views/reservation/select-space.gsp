@@ -28,9 +28,21 @@
                         <tr>
                             <td colspan="2">${location.building} ${location.room}</td>
                             <g:each in="${availableTimes}" var="time" status="i">
-                                <g:if test="${reservations[location].any { it.startDate <= time && it.endDate >= time} }">
-                                    <td class="unavailable"></td>
+                                <g:if test="${time < new Date()}">
+                                    <td class="past"></td>
                                 </g:if>
+                                <g:elseif test="${reservations[location].any { it.startDate <= time && it.endDate >= time } }">
+                                    <g:if test="${ reservations[location].find { it.startDate <= time && it.endDate >= time }.reserverId == (sec.loggedInUserInfo(field: 'id') as Long)}">
+                                        <td class="reserved-by-user">
+                                            <g:link controller="reservation" action="deleteReservation" params="[locationId: location.id, startTime: time.time]">
+                                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                            </g:link>
+                                        </td>
+                                    </g:if>
+                                    <g:else>
+                                        <td class="unavailable"></td>
+                                    </g:else>
+                                </g:elseif>
                                 <g:else>
                                     <td class="available">
                                         <g:link controller="reservation" action="confirmReservation" params="[locationId: location.id, startTime: time.time]">

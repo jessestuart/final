@@ -17,6 +17,9 @@
     border-collapse: separate;
     border-spacing: 5px;
 }
+#availability-table td {
+    text-align: center;
+}
 
 #availability-table td.unavailable {
     background: red;
@@ -25,8 +28,22 @@
     background: green;
     text-align: center;
 }
+#availability-table td.reserved-by-user {
+    background: #0000ff;
+}
+#availability-table td.past {
+    background: #808080;
+}
 
 #availability-table .glyphicon-thumbs-up {
-    text-align: center;
     color: white;
+}
+
+#availability-table .glyphicon-remove-circle {
+    color: white;
+}
+
+.alert {
+    width: 50%;
+    margin-left: 25%;
 }
