@@ -25,8 +25,6 @@
 				<sec:ifNotLoggedIn>
 					<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
 				    <li><a href="${createLink(uri: '/')}">About</a></li>
-				    <li><a href="${createLink(uri: '/')}">Tour</a></li>
-				    <li><a href="${createLink(uri: '/')}">Pricing</a></li>
 				</sec:ifNotLoggedIn>
 			</ul>
 			

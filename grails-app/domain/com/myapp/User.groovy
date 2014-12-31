@@ -12,18 +12,15 @@ class User {
 	
 	String fullName
 	String email
-	Date dateOfBirth
-	Address address
+	String dorm
 	
-	static embedded = ["address"]
 	static transients = ['springSecurityService']
 
 	static constraints = {
 		fullName blank: false
 		password blank: false
 		email blank: false, email: true, unique:true
-		dateOfBirth nullable: true
-		address nullable: true
+		dorm blank: false
 	}
 
 	static mapping = {

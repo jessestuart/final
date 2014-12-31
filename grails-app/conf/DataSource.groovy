@@ -36,7 +36,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create"
+            dbCreate = "create-drop"
             url = "jdbc:postgresql://localhost/cs50"
         }
     }

@@ -30,6 +30,12 @@ grails.exceptionresolver.params.exclude = ['password']
 grails.views.default.codec = "html"
 grails.gorm.default.mapping = { sort 'id' }
 
+// Reloading
+grails.reload.enabled = true
+disable.auto.recompile=false // Recompilation of Java Sources
+grails.gsp.enable.reload=true // Recompilation of GSPs
+grails.reload.enabled // Enable agent reloading of class files (disabled by default on 2.3)
+
 grails {
 	hibernate {
 		cache.queries = false

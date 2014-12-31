@@ -12,6 +12,6 @@
             </div>
         </div>
         
-		<p class="copy">&copy; Company, Inc. ${new GregorianCalendar().get(Calendar.YEAR)}</p>
+		<p class="copy">&copy; Lillian Barnes ${new GregorianCalendar().get(Calendar.YEAR)}</p>
 	</div>
 </footer>
