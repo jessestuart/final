@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN"     "http://jetty.mortbay.org/configure.dtd">
+
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+	<New id="httpConfig" class="org.eclipse.jetty.server.HttpConfiguration">
+	    <Set name="requestHeaderSize">262144</Set>
+	    <Set name="responseHeaderSize">262144</Set>
+	</New> 
+
+	<Call name="addConnector">
+		<Arg>
+			<New class="org.eclipse.jetty.server.ServerConnector">
+				<Arg name="server"><Ref id="Server" /></Arg>
+				<Arg name="factories">
+					<Array type="org.eclipse.jetty.server.ConnectionFactory">
+						<Item>
+							<New class="org.eclipse.jetty.server.HttpConnectionFactory">
+								<Arg name="config"><Ref id="httpConfig" /></Arg>
+							</New>
+						</Item>
+					</Array>
+				</Arg>
+				<Set name="port"><SystemProperty name="jetty.port" default="8080"/></Set>
+			</New>
+		</Arg>
+	</Call>
+</Configure>

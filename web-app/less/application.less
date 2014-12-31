@@ -1,0 +1,249 @@
+@import "../bootstrap/less/bootstrap.less";
+@import "variables.less";
+@import "bootstrap-datetimepicker.less";
+
+/* Main Layout */
+body { 
+	padding-top: 60px; 
+}
+
+.navbar-inverse {
+	.navbar-brand {
+	    color: #fff;
+		font-size: 20px;
+		font-weight: 200;
+	}
+    #gradient > .vertical(#444, #111);
+}
+
+.container.main {
+    min-height: 500px;
+}
+
+footer {
+    background-color: #cecece;
+    color: @gray;
+    margin: 60px 0 0 0;
+    padding: 30px 0 20px 0;
+    a, a:hover {
+        color: @gray;
+    }
+    &.footer-inverse {
+        background-color: #5c5c5c;
+        color: #ccc;
+        a, a:hover {
+            color: #ccc;
+        }
+    }
+    .copy {
+        margin-top: 30px
+    }    
+}
+
+/* General */
+.text-xlarge {
+    font-size: 1.8em;
+	line-height: 1.3em;
+}
+
+.nav-separator {
+    color: @gray-light;
+    padding: 0 5px;
+}
+
+.linkbar {
+	text-align: center;
+    a {
+        padding: 0 12px;
+        border-left: 1px dotted @gray-light;
+        &:first-child {
+            border: none;
+        }
+    }
+}
+
+/* Scaffolding */
+th.asc, th.desc {
+	.glyphicon {
+		margin-left: 10px;
+	}
+}
+
+tr {
+    &.clickable {
+        cursor: pointer;
+        a {
+            color: @text-color;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+thead {
+    th {
+	    white-space: nowrap;
+    }
+}
+
+dl {
+    dt, dd {
+		padding-top: 7px;
+		padding-bottom: 7px;
+    }
+}
+
+.form-group {
+	ul {
+		margin-top: 0;
+		margin-bottom: 7px;
+		li {
+			margin-top: 3px;
+			margin-bottom: 3px;
+			&:first-child {
+				margin-top: 7px;
+			}
+		}
+	}
+}
+
+dd {
+	ul {
+		margin-bottom: 0;
+		li {
+			margin-top: 3px;
+			margin-bottom: 3px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+input[type="checkbox"].checkbox-control {
+	margin: 0;
+	height: 34px;
+}
+
+/* Home */
+.billboard {
+    height: 340px;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 480px;
+        min-width: 100%;
+        z-index: -1;
+    }
+    .billboard-caption {
+        background-color: transparent;
+        padding: 0 20px;
+        margin-top: 130px;
+        h1, .lead {
+            margin: 0;
+            line-height: 1.25;
+            color: #fff;
+        }
+        h1 {
+            font-size: 5em;
+			text-shadow: 1px 1px 3px #999;
+        }
+    }
+    
+    .btn {
+        margin-top: 10px;
+    }
+}
+
+.marketing {
+	> div {
+		text-align: center;
+	}
+}
+
+.featurette-divider {
+	margin: 80px 0;
+}
+
+.featurette {
+	h2 {
+		margin-top: 120px;
+		font-size: 3.5em;
+	}
+}
+
+/* Signin */
+.login {
+	padding-top: 40px;
+}
+
+.form-signin {
+    padding: 19px 29px 29px;
+    margin: 40px auto 80px;
+    background-color: @table-bg-accent;
+    border: 1px solid darken(@table-bg-accent, 7%);
+    border-radius: 8px;
+    .box-shadow(0 1px 2px rgba(0,0,0,.1));
+    text-align: center;
+    h2 {
+        font-weight: 300;
+        text-align: left;
+        color: @gray;
+    }
+    fieldset {
+        text-align: left;
+    }
+}
+
+/* Error pages */
+.big-message {
+    color: #5A5A5A;
+    margin: 8em 0;
+    text-align: center;
+    h1 {
+        font-size: 8em;
+        font-weight: 500;
+        letter-spacing: -1px;
+        line-height: 1em;
+        margin: 0.0em 0 0.5em;
+    }
+    h2 {
+        font-size: 2em;
+    	font-weight: 200;
+    }
+    p {
+        font-size: 1.15em;
+        line-height: 1.5em;
+    }
+    .actions {
+        margin: 2.0em 0;
+    }
+}
+
+pre.snippet {
+    code.line {
+	    border: none;
+	    display: block;
+    }
+
+    .lineNumber {
+	    display: inline-block;
+	    width: 3em;
+    }
+
+    .error {
+	    font-weight: bold;
+    }
+}
+
+/* Projects */
+textarea#name {
+    height: 50px;
+}
+
+/* Tasks */
+textarea#descr {
+    height: 50px;
+}
